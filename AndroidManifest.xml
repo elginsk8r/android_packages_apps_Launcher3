@@ -59,6 +59,7 @@
         android:theme="@style/AppTheme"
         android:largeHeap="@bool/config_largeHeap"
         android:restoreAnyVersion="true"
+        android:requiredForAllUsers="true"
         android:supportsRtl="true" >
 
         <!--
