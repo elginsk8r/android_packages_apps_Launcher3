@@ -17,6 +17,7 @@
 package com.android.launcher3;
 
 import static com.android.launcher3.ItemInfoWithIcon.FLAG_ICON_BADGED;
+import static com.android.launcher3.settings.SettingsActivity.KEY_QSB_WIDGET;
 
 import android.animation.ValueAnimator;
 import android.annotation.TargetApi;
@@ -778,5 +779,9 @@ public final class Utilities {
         } catch (PackageManager.NameNotFoundException e) {
             return false;
         }
+    }
+
+    public static boolean isSearchBarVisible(Context context) {
+        return getPrefs(context).getBoolean(KEY_QSB_WIDGET, FeatureFlags.QSB_ON_FIRST_SCREEN);
     }
 }
