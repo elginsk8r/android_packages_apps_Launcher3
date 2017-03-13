@@ -16,6 +16,8 @@
 package com.android.launcher3.qsb;
 
 import android.content.Context;
+import android.content.SharedPreferences;
+import android.content.SharedPreferences.OnSharedPreferenceChangeListener;
 import android.graphics.Canvas;
 import android.graphics.Rect;
 import android.util.AttributeSet;
@@ -28,19 +30,26 @@ import com.android.launcher3.DeviceProfile;
 import com.android.launcher3.Hotseat;
 import com.android.launcher3.InsettableFrameLayout;
 import com.android.launcher3.R;
+import com.android.launcher3.settings.SettingsActivity;
 import com.android.launcher3.ShortcutAndWidgetContainer;
 import com.android.launcher3.views.BaseDragLayer;
 
 public class HotseatQsbContainer extends Hotseat {
 
     private AllAppsQsbContainer mAllAppsQsb;
+    private SharedPreferences mPrefs;
+
     private boolean mIsTransposed;
     private int mMarginBottom;
     private int mWidth;
 
+    private boolean mQsbVisible;
+
     public HotseatQsbContainer(Context context, AttributeSet attributeSet, int i) {
         super(context, attributeSet, i);
         mMarginBottom = getResources().getDimensionPixelSize(R.dimen.hotseat_qsb_bottom_margin);
+        mPrefs = Utilities.getPrefs(context);
+        mPrefs.registerOnSharedPreferenceChangeListener(this);
     }
 
     public HotseatQsbContainer(Context context, AttributeSet attributeSet) {
@@ -179,6 +188,19 @@ public class HotseatQsbContainer extends Hotseat {
             if (mAllAppsQsb != allAppsQsb) {
                 mAllAppsQsb = allAppsQsb;
             }
+        }
+        if (mAllAppsQsb != null) {
+            mAllAppsQsb.setVisibility(mQsbVisible ? View.VISIBLE : View.GONE);
+        }
+    }
+
+    @Override
+    public void onSharedPreferenceChanged(SharedPreferences prefs, String key) {
+        if (SettingsActivity.KEY_QSB_WIDGET.equals(key)) {
+            final boolean pkgAvailable = Utilities.hasPackageInstalled(getContext(),
+                            SearchLauncherCallbacks.SEARCH_PACKAGE);
+            mQsbVisible = mPrefs.getBoolean(SettingsActivity.KEY_QSB_WIDGET, pkgAvailable);
+            updateLayout();
         }
     }
 }

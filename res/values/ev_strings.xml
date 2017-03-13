@@ -36,4 +36,8 @@
     <string name="label_search">Search</string>
     <string name="label_voice_search">Voice search</string>
 
+    <!-- Search bar visibility setting -->
+    <string name="enable_qsb_widget_title">Show search bar</string>
+    <string name="enable_qsb_widget_desc">Toggle the search bar visibility on the home screen</string>
+
 </resources>

@@ -64,6 +64,7 @@ public class SettingsActivity extends Activity
     public static final String SAVE_HIGHLIGHTED_KEY = "android:preference_highlighted";
 
     public static final String KEY_MINUS_ONE = "pref_enable_minus_one";
+    public static final String KEY_QSB_WIDGET = "pref_qsb_widget";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -208,6 +209,12 @@ public class SettingsActivity extends Activity
                 case KEY_MINUS_ONE:
                     return Utilities.hasPackageInstalled(getContext(),
                             SearchLauncherCallbacks.SEARCH_PACKAGE);
+                case KEY_QSB_WIDGET:
+                    boolean value = Utilities.hasPackageInstalled(getContext(),
+                            SearchLauncherCallbacks.SEARCH_PACKAGE);
+                    // Initialize the UI once
+                    preference.setDefaultValue(value);
+                    return true;
             }
 
             return true;
