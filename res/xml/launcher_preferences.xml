@@ -44,6 +44,13 @@
         android:defaultValue="@bool/allow_rotation"
         android:persistent="true" />
 
+    <SwitchPreference
+        android:key="pref_enable_minus_one"
+        android:title="@string/enable_minus_one_title"
+        android:summary="@string/enable_minus_one_desc"
+        android:defaultValue="true"
+        android:persistent="true" />
+
     <androidx.preference.PreferenceScreen
         android:key="pref_developer_options"
         android:persistent="false"
