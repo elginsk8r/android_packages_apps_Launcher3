@@ -24,22 +24,33 @@
         launcher:numFolderRows="2"
         launcher:numFolderColumns="3"
         launcher:numHotseatIcons="3"
-        launcher:defaultLayoutId="@xml/default_workspace_3x3" >
+        launcher:defaultLayoutId="@xml/default_workspace_3x3">
 
         <display-option
-            launcher:name="Super Short Stubby"
-            launcher:minWidthDps="255"
-            launcher:minHeightDps="300"
-            launcher:iconImageSize="48"
-            launcher:iconTextSize="13.0"
+            launcher:name="Pixel"
+            launcher:minWidthDps="387"
+            launcher:minHeightDps="659"
+            launcher:iconImageSize="76"
+            launcher:iconTextSize="14"
+            launcher:landscapeIconSize="76"
             launcher:canBeDefault="true" />
 
         <display-option
-            launcher:name="Shorter Stubby"
-            launcher:minWidthDps="255"
-            launcher:minHeightDps="400"
-            launcher:iconImageSize="48"
-            launcher:iconTextSize="13.0"
+            launcher:name="Pixel (Display : Small)"
+            launcher:minWidthDps="296"
+            launcher:minHeightDps="496"
+            launcher:iconImageSize="68"
+            launcher:iconTextSize="12"
+            launcher:landscapeIconSize="68"
+            launcher:canBeDefault="true" />
+
+        <display-option
+            launcher:name="Pixel (Display : Largest)"
+            launcher:minWidthDps="449"
+            launcher:minHeightDps="754"
+            launcher:iconImageSize="88"
+            launcher:iconTextSize="16"
+            launcher:landscapeIconSize="88"
             launcher:canBeDefault="true" />
 
     </grid-option>
@@ -54,43 +65,30 @@
         launcher:defaultLayoutId="@xml/default_workspace_4x4" >
 
         <display-option
-            launcher:name="Short Stubby"
-            launcher:minWidthDps="275"
-            launcher:minHeightDps="420"
-            launcher:iconImageSize="48"
-            launcher:iconTextSize="13.0"
+            launcher:name="Pixel"
+            launcher:minWidthDps="387"
+            launcher:minHeightDps="659"
+            launcher:iconImageSize="60"
+            launcher:iconTextSize="12"
+            launcher:landscapeIconSize="60"
             launcher:canBeDefault="true" />
 
         <display-option
-            launcher:name="Stubby"
-            launcher:minWidthDps="255"
-            launcher:minHeightDps="450"
-            launcher:iconImageSize="48"
-            launcher:iconTextSize="13.0"
-            launcher:canBeDefault="true" />
-
-        <display-option
-            launcher:name="Nexus S"
+            launcher:name="Pixel (Display : Small)"
             launcher:minWidthDps="296"
-            launcher:minHeightDps="491.33"
-            launcher:iconImageSize="48"
-            launcher:iconTextSize="13.0"
+            launcher:minHeightDps="496"
+            launcher:iconImageSize="52"
+            launcher:iconTextSize="11"
+            launcher:landscapeIconSize="52"
             launcher:canBeDefault="true" />
 
         <display-option
-            launcher:name="Nexus 4"
-            launcher:minWidthDps="359"
-            launcher:minHeightDps="567"
-            launcher:iconImageSize="54"
-            launcher:iconTextSize="13.0"
-            launcher:canBeDefault="true" />
-
-        <display-option
-            launcher:name="Nexus 5"
-            launcher:minWidthDps="335"
-            launcher:minHeightDps="567"
-            launcher:iconImageSize="54"
-            launcher:iconTextSize="13.0"
+            launcher:name="Pixel (Display : Largest)"
+            launcher:minWidthDps="449"
+            launcher:minHeightDps="754"
+            launcher:iconImageSize="72"
+            launcher:iconTextSize="14"
+            launcher:landscapeIconSize="72"
             launcher:canBeDefault="true" />
 
     </grid-option>
@@ -105,19 +103,30 @@
         launcher:defaultLayoutId="@xml/default_workspace_5x5" >
 
         <display-option
-            launcher:name="Large Phone"
-            launcher:minWidthDps="406"
-            launcher:minHeightDps="694"
+            launcher:name="Pixel"
+            launcher:minWidthDps="387"
+            launcher:minHeightDps="659"
             launcher:iconImageSize="56"
-            launcher:iconTextSize="14.4"
+            launcher:iconTextSize="12"
+            launcher:landscapeIconSize="54"
             launcher:canBeDefault="true" />
 
         <display-option
-            launcher:name="Shorter Stubby"
-            launcher:minWidthDps="255"
-            launcher:minHeightDps="400"
-            launcher:iconImageSize="48"
-            launcher:iconTextSize="13.0"
+            launcher:name="Pixel 2 XL (Display size set to Largest)"
+            launcher:minWidthDps="296"
+            launcher:minHeightDps="568"
+            launcher:iconImageSize="54"
+            launcher:iconTextSize="12"
+            launcher:landscapeIconSize="48"
+            launcher:canBeDefault="true" />
+
+        <display-option
+            launcher:name="Pixel 2 XL"
+            launcher:minWidthDps="387"
+            launcher:minHeightDps="750"
+            launcher:iconImageSize="54"
+            launcher:iconTextSize="12"
+            launcher:landscapeIconSize="52"
             launcher:canBeDefault="true" />
 
     </grid-option>
